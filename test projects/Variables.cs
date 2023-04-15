@@ -1,10 +1,10 @@
 using System;
 
 class Program
-
 {
     static void Main(string[] args)
     {
+        
         Console.WriteLine("What is you first name? ");
         string first = Console.ReadLine();
 
@@ -12,6 +12,5 @@ class Program
         string last = Console.ReadLine();
 
         Console.WriteLine($"Your name is {last}, {first} {last}.");
-
     }
 }
