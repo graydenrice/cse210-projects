@@ -1,0 +1,15 @@
+class: job
+
+_jobTitle: string
+_company: string
+_startYear: int
+_endYear: int
+
+DisplayJob(): void
+
+class: resume
+
+personName: string
+personJobs: string
+
+DisplayResume(): void
