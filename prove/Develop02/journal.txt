@@ -1,0 +1,56 @@
+---------------------------
+class: journal
+
+behaviors:
+    NewEntry(): void
+        calls to the entry class to get a new entry
+    DisplayJournal(): void
+        dispalys the _entries attribute
+    SaveJournal(): void
+        appends new entries to a list
+    LoadJournal(): void
+        gets all of the entries from a file
+
+attributes:
+    _fileName: string
+        get file name from the user
+    List<entries> = new List<entries> 
+        holds the entries entered as a list
+---------------------------
+class: entry
+
+behaviors:
+    RandomPrompt(): void
+        gets a random number to that corresponds with one of the prompts
+attributes:
+    _date: string
+        gets current date
+    _prompt: string
+        holds the prompts for the entries
+
+NewEntry() -> RandomPrompt() -> _menu -> _prompt -> _date -> SaveJournal()
+
+the RandomPrompt() will us the Random function to choose a number that goes with a prompt
+SaveJournal() will save the entry to a txt file with the streamwriter function to the selected file
+LoadJournal() will load all of the jornal entries from the file selected by the user
+
+
+Random randomNum = new Random();
+                int number = randomNum.Next(1,5);
+                if (number == 1){
+                    Console.WriteLine("What was the weather like today?");
+                    
+                } else if (number == 2){
+                    Console.WriteLine("What was the best part of my day?");
+                    
+                }else if (number == 3){
+                    Console.WriteLine("How did I see the hand of the Lord in my life today?");
+                    
+                }else if (number == 4){
+                    Console.WriteLine("What was the strongest emotion I felt today?");
+                    
+                }else if (number == 5){
+                    Console.WriteLine("Where did you travel today?");
+                    
+                }
+                return _prompt;
