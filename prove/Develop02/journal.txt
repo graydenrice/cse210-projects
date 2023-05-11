@@ -27,6 +27,8 @@ attributes:
         gets current date
     _prompt: string
         holds the prompts for the entries
+    _response: string
+    gets the response from the user
 
 NewEntry() -> RandomPrompt() -> _menu -> _prompt -> _date -> SaveJournal()
 
