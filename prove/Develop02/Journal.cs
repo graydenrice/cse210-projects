@@ -37,10 +37,8 @@ public class Journal
             {
                 Console.WriteLine("Enter a file name: ");
                 string file = Console.ReadLine();
-                using (StreamWriter outputFile = new StreamWriter(file))
-                {
-                    foreach (Entry entry in _entries)
-                    {
+                using (StreamWriter outputFile = new StreamWriter(file)){
+                    foreach (Entry entry in _entries){
                         outputFile.WriteLine($"{entry._date}, {entry._weather}, {entry._weather}, {entry._prompt}, {entry._response}");
                     }
                 }
@@ -51,8 +49,7 @@ public class Journal
                 string filename = Console.ReadLine();
                 string[] lines = System.IO.File.ReadAllLines(filename);
 
-                foreach (string line in lines)
-                {
+                foreach (string line in lines){
                     string[] parts = line.Split(",");
 
                     string _date = parts[0];

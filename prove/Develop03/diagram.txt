@@ -1,0 +1,47 @@
+Class: Scripture
+
+Attributes:
+    _reference: string
+    _scriptureText: string
+    List<_words>
+
+Behaviors:
+    HideWords(): void
+    GetRenderedText(): string
+    CompletelyHidden(): bool
+    ToString(): string
+    getList(): void
+    
+Constructors: 
+    Scripture(string: reference, string: text)
+--------------------
+Class: Reference
+
+Attributes:
+    _book: string
+    _chapter: int
+    _verse: int
+    _endVerse: int
+
+Behaviors:
+    ToString(): string
+
+Constructors:
+    Reference(string: book, string: chapter, string: verse)
+    Reference(string: book, string: chapter, string: verse, string: verse)
+--------------------
+Class: Word
+
+Attributes:
+    _word: string
+    _hidden: bool
+    
+
+Behaviors:
+    Hide(): void
+    Show(): void
+    IsHidden(): bool
+    renderedText(): string
+
+Constructors:
+    Word(string: word)
