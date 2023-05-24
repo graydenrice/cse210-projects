@@ -45,3 +45,9 @@ Behaviors:
 
 Constructors:
     Word(string: word)
+
+The Reference class will get the parts of the reference (book, chaper, verse(s)) then put them together in a string.
+The Scripture class will take the info from the Reference class and add the text to the end to combine the reference and the text,
+the Scripture class also will put the text into a list, which will be taken by the Word class which will change the bool of each item
+depending on its status (hidden or shown) and change the display of hiden words to "_" which is sent to the scripture class.
+the scripture class then string together the words and puts in the rendered text.
