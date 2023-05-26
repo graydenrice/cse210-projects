@@ -1,0 +1,51 @@
+Class: Activity
+
+Attributes:
+
+_activity: string
+_description: string
+_duration: string
+
+Behaviors:
+
+DisplayStartMessage(): string
+DisplayEndMessage(): string
+ShowSpinner(): void
+ShowCountdown(): void
+RunActivity(): void
+
+Constructors:
+Activity(string activity, string description, string duration) 
+--------------------
+
+Class: BreathingActivity
+
+Attributes:
+
+Behaviors:
+GetDuration(): int
+DisplayActivity(): string
+
+Constructors:
+BreathingActivity(string description, string duration)
+
+--------------------
+
+Class: ReflectionActivity
+
+Attributes:
+
+Behaviors:
+
+Constructors:
+
+--------------------
+
+Class: ListingActivity
+
+Attributes:
+
+Behaviors:
+
+Constructors:
+
