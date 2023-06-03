@@ -18,21 +18,21 @@ class Program
             string user = Console.ReadLine();
 
             if(user == "1"){
-                int dur = Activity.GetDuration() + duration;
+                int dur = Activity.SetDuration() + duration;
                 string des = "relax by walking you thorugh breathing in and out slowly.\n Clear your mind and focus on your breathing";
                 Activity breath = new Activity("Breathing Activity", des, dur);
                 breath.RunBreathingActivity();
                 timebr += 1;
 
             }else if(user == "2"){
-                int dur = Activity.GetDuration() + duration;
+                int dur = Activity.SetDuration() + duration;
                 string refl = "reflect on times in your\n life when you have shown strength and resilience.\n This will help you recognize the power you have and\n how you can use it in other parts of your life.\n";
                 Activity reflect = new Activity("Reflecting Activity", refl, dur);
                 reflect.RunReflectionActivity();
                 timere += 1;
 
             }else if(user == "3"){
-                int dur = Activity.GetDuration() + duration;
+                int dur = Activity.SetDuration() + duration;
                 string list = "reflect on the good things in your\nlife by having you list as many things as you can\nin a certian area.";
                 Activity listing = new Activity("Listing Activity", list, dur);
                 listing.RunListingActivity();

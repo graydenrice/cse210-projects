@@ -15,10 +15,13 @@ public class Activity{
     public string DisplayEndMessage(){
         return $"\nGreat job on completeing {_duration} seconds of the {_activity}\n";
     }
-    public static int GetDuration(){
+    public static int SetDuration(){
         Console.WriteLine("How long would you like to do this activity(seconds)? ");
         string userInput = Console.ReadLine();
         int _duration = int.Parse(userInput);
+        return _duration;
+    }
+    public int GetDuration(){
         return _duration;
     }
     public string GetPrompt(List<string> _prompts){
@@ -84,7 +87,6 @@ public class Activity{
             breath.DisplayActivity();  
         }
         
-
         ShowSpinner(3);
 
         Console.WriteLine(DisplayEndMessage());
