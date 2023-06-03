@@ -20,7 +20,7 @@ public class Word{
         return _hidden;
     } 
 
-    public string renderedText(){
+    public string RenderedText(){
         if(_hidden == true){
             return new string('_', _word.Length);
         }else{
