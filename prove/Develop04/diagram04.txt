@@ -1,51 +1,69 @@
 Class: Activity
 
 Attributes:
-
-_activity: string
-_description: string
-_duration: string
+    _activity: string
+    _description: string
+    _duration: string
 
 Behaviors:
-
-DisplayStartMessage(): string
-DisplayEndMessage(): string
-ShowSpinner(): void
-ShowCountdown(): void
-RunActivity(): void
+    DisplayStartMessage(): string
+    DisplayEndMessage(): string
+    ShowSpinner(): void
+    ShowCountdown(): void
+    GetDuration(): int
+    GetPrompt(): string
+    RunBreathingActivity(): void
+    RunReflectingActivity(): void
+    RunListingActivity(): void
 
 Constructors:
-Activity(string activity, string description, string duration) 
+    Activity(string activity, string description, int duration) 
 --------------------
 
-Class: BreathingActivity
+Class: BreathingActivity : Activity
 
 Attributes:
 
 Behaviors:
-GetDuration(): int
-DisplayActivity(): string
+    DispalyActivity(): void
 
 Constructors:
-BreathingActivity(string description, string duration)
+    BreathingActivity(): base()
 
 --------------------
 
-Class: ReflectionActivity
+Class: ReflectionActivity : Activity
 
 Attributes:
+    List<string>_prompts
+    List<string> _questions
 
 Behaviors:
+    DisplayPrompt(): void
+    GetPromptQuestion(): string
+    DispalyPromptQuestion(): void
 
 Constructors:
-
+    ReflectionActivity(): base()
 --------------------
 
-Class: ListingActivity
+Class: ListingActivity : Activity
 
 Attributes:
+   List<string>_prompts
+   List<string> _answers
 
 Behaviors:
+   ToList(): void
+   DisplayPrompt(): void
+   DisplayListNum(): void
 
 Constructors:
+    ListingActivity(): base()
 
+
+the activity class will get the variable need for each class from the program
+.cs file from the actvity class each activity will run. the Breathing actvity
+class will call the variabel from the base class and the methods that it needs.
+the RunBreathingActivity method will call the information from the BreathingActivity
+class to put it all tog ether to run. Each other class will run in a similar manner.

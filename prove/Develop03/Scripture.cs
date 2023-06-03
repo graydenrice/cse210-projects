@@ -6,14 +6,14 @@ public class Scripture{
     public Scripture(string reference, string scriptureText){
         _reference = reference;
         _scriptureText = scriptureText;
-        getList();
+        GetList();
     }
 
     public override string ToString(){
         return $"{_reference}\n{_scriptureText}";
     }
 
-    public void getList(){
+    public void GetList(){
         string[] array = _scriptureText.Split(" ");
         foreach (var word in array){
             bool IsHidden = false;
@@ -37,7 +37,7 @@ public class Scripture{
         List<string> _newWords = new List<string>();
 
         foreach (Word word in _words){
-            _newWords.Add(word.renderedText());
+            _newWords.Add(word.RenderedText());
         }
         return string.Join(" ", _newWords);
     }
