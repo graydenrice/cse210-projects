@@ -6,12 +6,12 @@ public class BreathingActivity : Activity{
 
     public void DisplayActivity(){
         Console.WriteLine("\nBreath In... ");
-        Activity.ShowCountDown(3);
+        ShowCountDown(3);
 
         Thread.Sleep(250);
 
         Console.WriteLine("\nBreath Out... ");
-        Activity.ShowCountDown(4);
+        ShowCountDown(4);
 
         Thread.Sleep(250);
     }
@@ -26,7 +26,7 @@ public class BreathingActivity : Activity{
 
         Console.WriteLine("\nLets begin");
 
-        Activity.ShowSpinner(3);
+        ShowSpinner(3);
 
         DateTime startTime = DateTime.Now;
         DateTime endTime = startTime.AddSeconds(GetDuration());

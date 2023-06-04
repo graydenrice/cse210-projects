@@ -31,7 +31,7 @@ public class ListingActivity : Activity{
         Console.Clear();
         Console.WriteLine(DisplayStartMessage());
 
-        Activity.ShowSpinner(8);
+        ShowSpinner(8);
 
         DisplayPrompt();
 
@@ -58,7 +58,7 @@ public class ListingActivity : Activity{
 
         DisplayListNum();
 
-        Activity.ShowSpinner(3);
+        ShowSpinner(3);
 
         Console.WriteLine(DisplayEndMessage());
 

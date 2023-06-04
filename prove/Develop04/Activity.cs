@@ -30,7 +30,7 @@ public class Activity{
         return _prompts[index];
     }
 
-    public static void ShowSpinner(int seconds){
+    public void ShowSpinner(int seconds){
         DateTime startTime = DateTime.Now;
         DateTime endTime = startTime.AddSeconds(seconds);
 
@@ -57,7 +57,7 @@ public class Activity{
             Console.Write("\b \b");
         }
     }
-    public static void ShowCountDown(int time, bool display = true){
+    public void ShowCountDown(int time, bool display = true){
         if(display){
             for(int i = time; i > 0; i -- ){
                 Console.Write(i);

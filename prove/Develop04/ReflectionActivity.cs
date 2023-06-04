@@ -40,7 +40,7 @@ public class ReflectionActivity : Activity{
         Console.Clear();
 
         Console.WriteLine(DisplayStartMessage());
-        Activity.ShowSpinner(8);
+        ShowSpinner(8);
 
         Console.WriteLine("Please Consider the Following\n");
 
