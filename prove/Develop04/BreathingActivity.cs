@@ -5,14 +5,38 @@ public class BreathingActivity : Activity{
     }
 
     public void DisplayActivity(){
-        Console.Write("\n\nBreath In... ");
+        Console.WriteLine("\nBreath In... ");
         Activity.ShowCountDown(3);
 
         Thread.Sleep(250);
 
-        Console.Write("\n\nBreath Out... ");
+        Console.WriteLine("\nBreath Out... ");
         Activity.ShowCountDown(4);
 
         Thread.Sleep(250);
+    }
+    
+    public void RunBreathingActivity(){
+        Thread.Sleep(1000);
+        Console.Clear();
+
+        Console.WriteLine(DisplayStartMessage());
+
+        ShowSpinner(3);
+
+        Console.WriteLine("\nLets begin");
+
+        Activity.ShowSpinner(3);
+
+        DateTime startTime = DateTime.Now;
+        DateTime endTime = startTime.AddSeconds(GetDuration());
+
+        while(DateTime.Now < endTime){
+            DisplayActivity();  
+        }
+        
+        ShowSpinner(3);
+
+        Console.WriteLine(DisplayEndMessage());
     }
 }

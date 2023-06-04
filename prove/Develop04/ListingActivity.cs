@@ -26,4 +26,42 @@ public class ListingActivity : Activity{
         Console.WriteLine($"You have entered {num} things, Thats awesome!");
     }
 
+    public void RunListingActivity(){
+        Thread.Sleep(1000);
+        Console.Clear();
+        Console.WriteLine(DisplayStartMessage());
+
+        Activity.ShowSpinner(8);
+
+        DisplayPrompt();
+
+        Console.WriteLine("Begin thinking about the question...");
+
+        ShowCountDown(7);
+
+        Console.WriteLine("List as many things as you can: ");
+
+        DateTime startTime = DateTime.Now;
+        DateTime endTime = startTime.AddSeconds(GetDuration());
+
+        while(DateTime.Now < endTime){
+            string input = Console.ReadLine();
+            ToList(input);
+           
+            if(DateTime.Now >= endTime){
+                break;
+            }
+
+        }
+
+        Thread.Sleep(1000);
+
+        DisplayListNum();
+
+        Activity.ShowSpinner(3);
+
+        Console.WriteLine(DisplayEndMessage());
+
+        Thread.Sleep(5000);
+    }
 }

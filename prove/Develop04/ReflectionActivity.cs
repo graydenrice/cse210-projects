@@ -34,4 +34,31 @@ public class ReflectionActivity : Activity{
     public void DisplayPromptQuestion(){
         Console.WriteLine($"{GetPromptQuestion()}");
     }
+
+    public void RunReflectionActivity(){
+        Thread.Sleep(1000);
+        Console.Clear();
+
+        Console.WriteLine(DisplayStartMessage());
+        Activity.ShowSpinner(8);
+
+        Console.WriteLine("Please Consider the Following\n");
+
+        DisplayPrompt();
+
+        Console.WriteLine("Press enter to continue");
+        Console.ReadLine();
+
+        DateTime startTime = DateTime.Now;
+        DateTime endTime = startTime.AddSeconds(GetDuration());
+
+        while(DateTime.Now < endTime){
+            DisplayPromptQuestion();
+            ShowSpinner(10);
+        }
+
+        Console.WriteLine(DisplayEndMessage());
+        Thread.Sleep(5000);
+    }
 }
+
