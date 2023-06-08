@@ -57,14 +57,13 @@ public class Activity{
             Console.Write("\b \b");
         }
     }
-    public void ShowCountDown(int time, bool display = true){
-        if(display){
-            for(int i = time; i > 0; i -- ){
-                Console.Write(i);
+    public void ShowCountDown(int time){
+        
+        for(int i = time; i > 0; i -- ){
+            Console.Write(i);
                 
-                Thread.Sleep(1000);
-                Console.Write("\b \b");
-            }
+            Thread.Sleep(1000);
+            Console.Write("\b \b");
         }
     }
     
