@@ -46,7 +46,7 @@ public class ListingActivity : Activity{
         DateTime startTime = DateTime.Now;
         DateTime endTime = startTime.AddSeconds(GetDuration());
 
-        while(DateTime.Now < endTime){
+        while(DateTime.Now <= endTime){
             string input = Console.ReadLine();
             ToList(input);
            
