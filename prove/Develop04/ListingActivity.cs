@@ -41,6 +41,8 @@ public class ListingActivity : Activity{
 
         Console.WriteLine("List as many things as you can: ");
 
+        _answers.Clear();
+
         DateTime startTime = DateTime.Now;
         DateTime endTime = startTime.AddSeconds(GetDuration());
 

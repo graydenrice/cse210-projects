@@ -34,6 +34,7 @@ public class Activity{
         DateTime startTime = DateTime.Now;
         DateTime endTime = startTime.AddSeconds(seconds);
 
+        Console.CursorVisible = false;
         while(DateTime.Now < endTime){
             Console.Write("-");
 
@@ -56,6 +57,7 @@ public class Activity{
                     
             Console.Write("\b \b");
         }
+        Console.CursorVisible = true;
     }
     public void ShowCountDown(int time){
         

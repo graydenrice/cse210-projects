@@ -5,12 +5,12 @@ public class BreathingActivity : Activity{
     }
 
     public void DisplayActivity(){
-        Console.WriteLine("\nBreath In... ");
+        Console.Write("\nBreath In... ");
         ShowCountDown(3);
 
         Thread.Sleep(250);
 
-        Console.WriteLine("\nBreath Out... ");
+        Console.Write("\nBreath Out... ");
         ShowCountDown(4);
 
         Thread.Sleep(250);
@@ -24,17 +24,19 @@ public class BreathingActivity : Activity{
 
         ShowSpinner(3);
 
-        Console.WriteLine("\nLets begin");
+        Console.Write("\nLets begin  ");
 
         ShowSpinner(3);
 
         DateTime startTime = DateTime.Now;
         DateTime endTime = startTime.AddSeconds(GetDuration());
 
+        Console.CursorVisible = false;
         while(DateTime.Now < endTime){
             DisplayActivity();  
         }
-        
+        Console.CursorVisible = true;
+
         ShowSpinner(3);
 
         Console.WriteLine(DisplayEndMessage());

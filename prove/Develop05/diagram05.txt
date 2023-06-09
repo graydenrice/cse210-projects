@@ -1,0 +1,66 @@
+Class: Goals
+
+Attributes:
+    _score: int
+    _goal: string
+    _description: string
+    List<Goals>
+Constructors:
+    Goals(int score, string goal, string description)
+Behaviors:
+    DisplayScore(): void
+    DisplayGoals(): void
+    CreateGoal(): void
+    IsComplete(): bool abstract
+    RecordEvent(): void abstract
+--------------
+
+Class: SimpleGoals : Goals
+
+Attributes:
+    _points: int
+    _complete: bool
+
+Constructors:
+    SimpleGoals(int score, string goal, string description)
+    SimpleGoals(int points, bool complete)
+Behaviors:
+    RecordEvent(): void override
+    IsComplete(): bool override
+--------------
+
+Class: EternalGoals : Goals
+
+Attributes:
+    _points: int
+Constructors:
+    EternalGoals(int score, string goal, string description)
+    EternalGoals(int points)
+Behaviors:
+    RecordEvent(): void override
+    IsComplete(): bool override
+--------------
+
+Class: CheckListGoals : Goals
+
+Attributes:
+    _complete: bool
+    _points: int
+    _bonus: int
+Constructors:
+    CheckListGoals(int score, string goal, string description)
+    CheckListGoals(int points, int bonus, bool complete)
+Behaviors:
+    RecordEvent(): void override
+    IsComplete(): bool override
+--------------
+
+Class: Interface
+
+Attributes:
+
+Constructors:
+
+Behaviors:
+
+--------------
