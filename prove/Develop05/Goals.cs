@@ -60,16 +60,13 @@ public abstract class Goals{
                 string status = goal.IsComplete() ? "true" : "false";
             string goalLine = $"{goal._goalType} | {status} | {goal._goal} | {goal._description}";
 
-            if (goal is CheckListGoals checkGoal)
-            {
+            if (goal is CheckListGoals checkGoal){
                 goalLine += $" | {checkGoal._points} | {checkGoal.GetBonus()} | {checkGoal.GetTimesChecked()} | {checkGoal.GetTimes()}";
             }
-            else if (goal is SimpleGoals simpleGoal)
-            {
+            else if (goal is SimpleGoals simpleGoal){
                 goalLine += $" | {simpleGoal._points}";
             }
-            else if (goal is EternalGoals eternalGoal)
-            {
+            else if (goal is EternalGoals eternalGoal){
                 goalLine += $" | {eternalGoal._points}";
             }
 

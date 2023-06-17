@@ -15,16 +15,6 @@ class Program
 
         string _metal = "none";
 
-        if(_score >= 100){
-            _metal = "Bronze";
-        }else if(_score >= 500){
-            _metal = "Silver";
-        }else if(_score >= 1000){
-            _metal = "Gold";
-        }else if(_score >= 5000){
-            _metal = "Diamond";
-        }
-
         while(loop == true){
             Console.WriteLine($"Your score is {_score}");
             Console.WriteLine($"Your Current Meatal is {_metal}");
