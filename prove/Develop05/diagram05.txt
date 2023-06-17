@@ -4,15 +4,16 @@ Attributes:
     _score: int
     _goal: string
     _description: string
-    List<Goals>
+    _complete: bool
+    _goaltype: string
 Constructors:
     Goals(int score, string goal, string description)
 Behaviors:
-    DisplayScore(): void
-    DisplayGoals(): void
-    CreateGoal(): void
-    IsComplete(): bool abstract
+    IsComplete(): bool virtual
     RecordEvent(): void abstract
+    ToString(): string
+    SaveGoals(): void
+    LoadGoals(): void
 --------------
 
 Class: SimpleGoals : Goals
@@ -27,6 +28,7 @@ Constructors:
 Behaviors:
     RecordEvent(): void override
     IsComplete(): bool override
+
 --------------
 
 Class: EternalGoals : Goals
@@ -38,13 +40,15 @@ Constructors:
     EternalGoals(int points)
 Behaviors:
     RecordEvent(): void override
-    IsComplete(): bool override
+    IsComplete(): bool override (set to always false)
+   
 --------------
 
 Class: CheckListGoals : Goals
 
 Attributes:
-    _complete: bool
+    _timesChecked: int
+    _numberOfTimes: int
     _points: int
     _bonus: int
 Constructors:
@@ -53,14 +57,14 @@ Constructors:
 Behaviors:
     RecordEvent(): void override
     IsComplete(): bool override
+  
 --------------
-
-Class: Interface
-
-Attributes:
-
-Constructors:
-
-Behaviors:
-
---------------
+a list of goals is created in the main part of the program. the program will display
+a menu from the main of the program, when you select create goal you will be asked
+which type you want to create which will then ask you a series of questions realated
+to the type of goal and a constructor will take the info and it will be added to the 
+list. if you select save goals you will be asked for a filename and the goals will be
+saved to that file in a seperated fromat with the goal type and score saved with it.
+when you recored and event the RecordEvent method will be called from the respective
+derived class that the goal that is selected is realated to where is will be maked _complete
+or have 1 more time checked and the points will be added.

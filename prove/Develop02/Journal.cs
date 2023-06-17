@@ -37,7 +37,7 @@ public class Journal
             {
                 Console.WriteLine("Enter a file name: ");
                 string file = Console.ReadLine();
-                using (StreamWriter outputFile = new StreamWriter(file)){
+                using (StreamWriter outputFile = new StreamWriter(file, false)){
                     foreach (Entry entry in _entries){
                         outputFile.WriteLine($"{entry._date}, {entry._weather}, {entry._weather}, {entry._prompt}, {entry._response}");
                     }
