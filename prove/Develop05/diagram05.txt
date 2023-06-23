@@ -1,6 +1,7 @@
 Class: Goals
 
 Attributes:
+    _points: int
     _score: int
     _goal: string
     _description: string
@@ -9,6 +10,7 @@ Attributes:
 Constructors:
     Goals(int score, string goal, string description)
 Behaviors:
+    DisplayGoals(): void virtual
     IsComplete(): bool virtual
     RecordEvent(): void abstract
     ToString(): string
@@ -19,7 +21,7 @@ Behaviors:
 Class: SimpleGoals : Goals
 
 Attributes:
-    _points: int
+    
     _complete: bool
 
 Constructors:
@@ -34,7 +36,7 @@ Behaviors:
 Class: EternalGoals : Goals
 
 Attributes:
-    _points: int
+   
 Constructors:
     EternalGoals(int score, string goal, string description)
     EternalGoals(int points)
@@ -49,7 +51,6 @@ Class: CheckListGoals : Goals
 Attributes:
     _timesChecked: int
     _numberOfTimes: int
-    _points: int
     _bonus: int
 Constructors:
     CheckListGoals(int score, string goal, string description)

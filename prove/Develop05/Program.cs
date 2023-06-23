@@ -17,7 +17,7 @@ class Program
 
         while(loop == true){
             Console.WriteLine($"Your score is {_score}");
-            Console.WriteLine($"Your Current Meatal is {_metal}");
+            Console.WriteLine($"Your Current Metal is {_metal}");
             Console.WriteLine("Menu Options:");
             Console.WriteLine("1. Create New Goal\n2. List Goals\n3. Save Goals\n4. Load Goals\n5. Record Event\n6. Quit");
             Console.Write("Select a choice from the menu: ");

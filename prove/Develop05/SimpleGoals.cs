@@ -21,7 +21,6 @@ public class SimpleGoals : Goals{
         outputFile.WriteLine($"{_goalType} | {_complete} | {_goal} | {_description} | {_points}");
     }
 
-    public override void LoadGoal(string[] parts)
-    {
+    public override void LoadGoal(string[] parts){
     }
 }

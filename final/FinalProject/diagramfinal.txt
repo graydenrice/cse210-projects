@@ -1,0 +1,89 @@
+1. Class: Main
+
+Attributes:
+
+Constructors:
+
+Behaviours:
+
+---------------
+
+2. Class: UserInterface
+
+Attributes:
+
+Constructors:
+    
+Behaviours:
+    DisplayMenu(): void
+---------------
+
+3. Base Class: abstract NoteBook
+
+Attributes:
+    _entryType: string
+    _header: string
+    List<NoteBook> _notesList
+Constructors:
+
+Behaviours:
+    abstract NewEntry(): string
+    DeleteEntry: void
+---------------
+
+4. Class: Note : NoteBook
+
+Attributes:
+    _noteText: string
+Constructors:
+    Note(string entryType, string header)
+Behaviours:
+    override NewEntry(): string
+---------------
+
+5. Class: Contact : NoteBook
+
+Attributes:
+    name from _header
+    _phone: int
+    _email: string
+Constructors:
+    Contact(string _entryType, string header)
+Behaviours:
+    override NewEntry(): string
+---------------
+
+6. Class: Schedule : NoteBook
+
+Attributes:
+    _date: dateTime
+    _time: string
+    _event: string
+Constructors:
+    Note(string entryType, string header)
+Behaviours:
+    override NewEntry(): string
+---------------
+
+7. Class: Passwords : NoteBook
+
+Attributes:
+    site will come from _header
+    _username: string
+    _password: string
+Constructors:
+    Note(string entryType, string header)
+Behaviours:
+    override NewEntry(): string
+---------------
+
+8. Class: SaveLoad
+
+Attributes:
+
+Constructors:
+
+Behaviours:
+    Save(): void
+    Load(): void
+---------------
