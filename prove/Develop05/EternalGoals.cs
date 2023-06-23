@@ -11,12 +11,4 @@ public class EternalGoals : Goals{
     public override int RecordEvent(){
         return _points;
     }
-
-    public override void SaveGoal(StreamWriter outputFile){
-        outputFile.WriteLine($"{_goalType} | {_complete} | {_goal} | {_description} | {_points}");
-    }
-
-    public override void LoadGoal(string[] parts){
-        
-    }
 }

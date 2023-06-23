@@ -39,12 +39,4 @@ public class CheckListGoals : Goals{
     public int GetBonus(){
         return _bonus;
     }
-
-    public override void SaveGoal(StreamWriter outputFile){
-        outputFile.WriteLine($"{_goalType} | {_complete} | {_goal} | {_description} | {_points} | {_bonus} | {_timesChecked} | {_times}");
-    }
-
-    public override void LoadGoal(string[] parts){
-        
-    }
 }

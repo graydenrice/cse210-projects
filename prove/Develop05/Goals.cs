@@ -41,23 +41,15 @@ public abstract class Goals
         return $"{status} {_goal}: ({_description})";
     }
 
-    public abstract void SaveGoal(StreamWriter outputFile);
-
-    public abstract void LoadGoal(string[] parts);
-
-
     public static void SaveGoals(List<Goals> _goalsList, int score){
         Console.WriteLine("Enter file name: ");
         string file = Console.ReadLine();
-
-        File.WriteAllText(file, string.Empty);
 
         using (StreamWriter outputFile = new StreamWriter(file)){
             outputFile.WriteLine(score);
 
             foreach (Goals goal in _goalsList){
-                goal.SaveGoal(outputFile);
-
+                
                 string status = goal.IsComplete() ? "true" : "false";
                 string goalLine = $"{goal._goalType} | {status} | {goal._goal} | {goal._description}";
 
@@ -74,6 +66,7 @@ public abstract class Goals
                 outputFile.WriteLine(goalLine);
             }
         }
+        _goalsList.Clear();
     }
 
 

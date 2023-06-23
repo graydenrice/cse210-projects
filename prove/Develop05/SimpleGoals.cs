@@ -16,11 +16,4 @@ public class SimpleGoals : Goals{
     public override string ToString(){
         return $"{base.ToString()}";
     }
-
-    public override void SaveGoal(StreamWriter outputFile){
-        outputFile.WriteLine($"{_goalType} | {_complete} | {_goal} | {_description} | {_points}");
-    }
-
-    public override void LoadGoal(string[] parts){
-    }
 }
