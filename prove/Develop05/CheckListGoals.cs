@@ -18,8 +18,9 @@ public class CheckListGoals : Goals{
         _timesChecked++;
         if(_timesChecked >= _times){
             _complete = true;
+            return GetPoints() + GetBonus();
         }
-
+        
         bool completed = IsComplete();
         return _points;
     }

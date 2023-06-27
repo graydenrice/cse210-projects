@@ -1,11 +1,11 @@
-1. Class: Main
+1. Class: Program
 
 Attributes:
 
 Constructors:
 
 Behaviours:
-
+    DisplayInterface(): void
 ---------------
 
 2. Class: UserInterface
@@ -16,6 +16,8 @@ Constructors:
     
 Behaviours:
     DisplayMenu(): void
+    NewEntryMenu(): void
+    DisplayNoteBook(): void
 ---------------
 
 3. Base Class: abstract NoteBook
@@ -25,10 +27,11 @@ Attributes:
     _header: string
     List<NoteBook> _notesList
 Constructors:
-
+    NoteBook(string entryType, string header)
 Behaviours:
     abstract NewEntry(): string
-    DeleteEntry: void
+    DeleteEntry(): void
+    EditEntry(): void
 ---------------
 
 4. Class: Note : NoteBook
@@ -36,7 +39,7 @@ Behaviours:
 Attributes:
     _noteText: string
 Constructors:
-    Note(string entryType, string header)
+    Note(string entryType, string header) : Base(entryType, header)
 Behaviours:
     override NewEntry(): string
 ---------------
@@ -48,7 +51,7 @@ Attributes:
     _phone: int
     _email: string
 Constructors:
-    Contact(string _entryType, string header)
+    Contact(string entryType, string header) : Base(entryType, header)
 Behaviours:
     override NewEntry(): string
 ---------------
@@ -60,7 +63,7 @@ Attributes:
     _time: string
     _event: string
 Constructors:
-    Note(string entryType, string header)
+    Note(string entryType, string header) : Base(entryType, header)
 Behaviours:
     override NewEntry(): string
 ---------------
@@ -72,12 +75,12 @@ Attributes:
     _username: string
     _password: string
 Constructors:
-    Note(string entryType, string header)
+    Note(string entryType, string header) : Base(entryType, header)
 Behaviours:
     override NewEntry(): string
 ---------------
 
-8. Class: SaveLoad
+8. Class: FileHandler
 
 Attributes:
 

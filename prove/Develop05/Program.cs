@@ -78,14 +78,14 @@ class Program
                     _goalsList.Add(check);
                     }
             }else if(choice == "2"){
-               Goals.DisplayGoals(_goalsList, number);
+                FileHandler.DisplayGoals(_goalsList, number);
             }else if(choice == "3"){
-                Goals.SaveGoals(_goalsList, _score);
+                FileHandler.SaveGoals(_goalsList, _score);
             }else if(choice == "4"){
-                _score = Goals.LoadGoals(_goalsList);
+                _score = FileHandler.LoadGoals(_goalsList);
                 
             }else if(choice == "5"){
-                Goals.DisplayGoals(_goalsList, number);
+                FileHandler.DisplayGoals(_goalsList, number);
                 Console.WriteLine("Which goal did you do? ");
                 int record = int.Parse(Console.ReadLine());
 
@@ -98,18 +98,16 @@ class Program
                         switch (goalType){
                             case "check":
                                 CheckListGoals checkListGoal = (CheckListGoals)goal;
-                                checkListGoal.RecordEvent();
+                                _score += checkListGoal.RecordEvent();
                                 break;
                             case "simple":
                             case "eternal":
-                                goal.RecordEvent();
+                                _score += goal.RecordEvent();
                                 break;
                             default:
                                 Console.WriteLine("Invalid goal type.");
                                 break;
                         }
-
-                        _score += goal.GetPoints();
 
                         Console.WriteLine($"Goal completed! {goal.GetPoints()} points added to the score.");
                     }
