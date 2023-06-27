@@ -18,6 +18,7 @@ public class CheckListGoals : Goals{
         _timesChecked++;
         if(_timesChecked >= _times){
             _complete = true;
+            Console.WriteLine($"You got {GetBonus()} bonus points!");
             return GetPoints() + GetBonus();
         }
         
