@@ -1,10 +1,10 @@
 public class FileHandler{
 
-    public void Save(){
+    public static void Save(){
 
     }
 
-    public void Load(){
+    public static void Load(){
         
     }
 }

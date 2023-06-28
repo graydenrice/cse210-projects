@@ -6,7 +6,18 @@ public class Note : NoteBook{
         _noteText = noteText;
     }
 
-    public override string NewEntry(){
-        return null;
+    public override void NewEntry(List<NoteBook> _notesList){
+        Console.WriteLine("What is the title of your note?");
+        string title = Console.ReadLine();
+
+        Console.WriteLine("Enter note: ");
+        string noteText = Console.ReadLine();
+
+        Note note = new Note("note", title, noteText);
+        _notesList.Add(note);
+    }
+
+    public override string ToString(){
+        return $"{GetHeader()}: {_noteText}";
     }
 }

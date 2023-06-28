@@ -11,7 +11,7 @@ Behaviours:
 2. Class: UserInterface
 
 Attributes:
-
+    List<NoteBook> _notesList
 Constructors:
     
 Behaviours:
@@ -25,13 +25,11 @@ Behaviours:
 Attributes:
     _entryType: string
     _header: string
-    List<NoteBook> _notesList
 Constructors:
     NoteBook(string entryType, string header)
 Behaviours:
     abstract NewEntry(): string
     DeleteEntry(): void
-    EditEntry(): void
 ---------------
 
 4. Class: Note : NoteBook
@@ -42,6 +40,7 @@ Constructors:
     Note(string entryType, string header) : Base(entryType, header)
 Behaviours:
     override NewEntry(): string
+    ToString() : string
 ---------------
 
 5. Class: Contact : NoteBook
@@ -54,6 +53,7 @@ Constructors:
     Contact(string entryType, string header) : Base(entryType, header)
 Behaviours:
     override NewEntry(): string
+    ToString() : string
 ---------------
 
 6. Class: Schedule : NoteBook
@@ -66,6 +66,7 @@ Constructors:
     Note(string entryType, string header) : Base(entryType, header)
 Behaviours:
     override NewEntry(): string
+    ToString() : string
 ---------------
 
 7. Class: Passwords : NoteBook
@@ -78,6 +79,7 @@ Constructors:
     Note(string entryType, string header) : Base(entryType, header)
 Behaviours:
     override NewEntry(): string
+    ToString() : string
 ---------------
 
 8. Class: FileHandler
