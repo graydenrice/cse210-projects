@@ -10,12 +10,12 @@ public abstract class NoteBook{
 
     public abstract void NewEntry(List<NoteBook> _notesList);
 
-    public static void DeleteEntry(){
-
-    }
-
     public string GetHeader(){
         return _header;
+    }
+
+    public string GetEntryType(){
+        return _entryType;
     }
 
 }

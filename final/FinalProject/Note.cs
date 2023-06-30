@@ -17,6 +17,10 @@ public class Note : NoteBook{
         _notesList.Add(note);
     }
 
+    public string GetNoteText(){
+        return _noteText;
+    }
+
     public override string ToString(){
         return $"{GetHeader()}: {_noteText}";
     }

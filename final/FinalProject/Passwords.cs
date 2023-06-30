@@ -22,6 +22,14 @@ public class Passwords : NoteBook{
         _notesList.Add(password);
     }
 
+    public string GetUsername(){
+        return _username;
+    }
+
+    public string GetPassword(){
+        return _password;
+    }
+
     public override string ToString(){
         return $"{GetHeader()}: username:{_username} - password:{_password}";
     }

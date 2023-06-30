@@ -22,7 +22,15 @@ public class Contact : NoteBook{
         _notesList.Add(contact);
     }
 
+    public string GetPhone(){
+        return _phone;
+    }
+
+    public string GetInfo(){
+        return _info;
+    }
+
     public override string ToString(){
-        return $"{GetHeader()}\n{_phone}\n{_info}";
+        return $"{GetHeader()} Phone: {_phone} - info: {_info}";
     }
 }

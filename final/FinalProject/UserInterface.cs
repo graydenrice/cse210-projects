@@ -21,17 +21,32 @@ public class UserInterface{
             string user = Console.ReadLine();
 
             if(user == "1"){
+                Console.Clear();
                 NewEntryMenu();
             }else if(user == "2"){
                 foreach (var note in _notesList){
                     Console.WriteLine(note);
                 }
             }else if(user == "3"){
-                NoteBook.DeleteEntry();
+                Console.Clear();
+                Console.WriteLine("Which note would you like to remove?");
+                int del = int.Parse(Console.ReadLine());
+                int select = del - 1;
+
+                Console.WriteLine("Are you sure you would like to delete this note?");
+                Console.WriteLine("1. Yes");
+                Console.WriteLine("2. No");
+                string userInput = Console.ReadLine();
+
+                if(userInput == "1"){
+                    _notesList.RemoveAt(select);
+                }else{
+                    Console.WriteLine("");
+                }
             }else if(user == "4"){
-                FileHandler.Save();
+                FileHandler.Save(_notesList);
             }else if(user == "5"){
-                FileHandler.Load();
+                FileHandler.Load(_notesList);
             }else if(user == "6"){
                 loop = false;
             }else{
@@ -52,19 +67,17 @@ public class UserInterface{
         if(user == "1"){
             Note note = new Note("", "", "");
             note.NewEntry(_notesList);
-            
         }else if(user == "2"){
-
+            Schedule schedule = new Schedule("", "", "", "", "");
+            schedule.NewEntry(_notesList);
         }else if(user == "3"){
-
+            Contact contact = new Contact("", "", "", "");
+            contact.NewEntry(_notesList);
         }else if(user == "4"){
-
+            Passwords password = new Passwords("", "", "", "");
+            password.NewEntry(_notesList);
         }else{
             Console.WriteLine("Invalid Response");
         }
-    }
-
-    public void DisplayNoteBook(){
-        
     }
 }

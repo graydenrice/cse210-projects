@@ -28,8 +28,8 @@ Attributes:
 Constructors:
     NoteBook(string entryType, string header)
 Behaviours:
-    abstract NewEntry(): string
-    DeleteEntry(): void
+    abstract NewEntry(): void
+    GetHeader(): string
 ---------------
 
 4. Class: Note : NoteBook
@@ -37,36 +37,41 @@ Behaviours:
 Attributes:
     _noteText: string
 Constructors:
-    Note(string entryType, string header) : Base(entryType, header)
+    Note(string entryType, string header, string noteText) : Base(entryType, header)
 Behaviours:
     override NewEntry(): string
     ToString() : string
+    GetNoteText(): string
 ---------------
 
 5. Class: Contact : NoteBook
 
 Attributes:
-    name from _header
     _phone: int
     _email: string
 Constructors:
-    Contact(string entryType, string header) : Base(entryType, header)
+    Contact(string entryType, string header, string phone, string email) : Base(entryType, header)
 Behaviours:
     override NewEntry(): string
-    ToString() : string
+    ToString(): string
+    GetPhone(): string
+    GetEmail(): string
 ---------------
 
 6. Class: Schedule : NoteBook
 
 Attributes:
-    _date: dateTime
+    _date: string
     _time: string
-    _event: string
+    _detail: string
 Constructors:
-    Note(string entryType, string header) : Base(entryType, header)
+    Note(string entryType, string header, string date, string time, string detail) : Base(entryType, header)
 Behaviours:
     override NewEntry(): string
-    ToString() : string
+    ToString(): string
+    GetDate(): string
+    GetTime(): string
+    GetDetail(): string
 ---------------
 
 7. Class: Passwords : NoteBook
@@ -76,10 +81,12 @@ Attributes:
     _username: string
     _password: string
 Constructors:
-    Note(string entryType, string header) : Base(entryType, header)
+    Note(string entryType, string header, string username, string password) : Base(entryType, header)
 Behaviours:
     override NewEntry(): string
     ToString() : string
+    GetUsername(): string
+    GetPassword(): string
 ---------------
 
 8. Class: FileHandler
@@ -92,3 +99,4 @@ Behaviours:
     Save(): void
     Load(): void
 ---------------
+

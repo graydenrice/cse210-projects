@@ -1,10 +1,10 @@
 public class Schedule : NoteBook{
 
-    private int _time;
+    private string _time;
     private string _detail;
     private string _date;
 
-    public Schedule(string entryType, string header, string date, int time, string detail) : base(entryType, header){
+    public Schedule(string entryType, string header, string date, string time, string detail) : base(entryType, header){
         _time = time;
         _detail = detail;
         _date = date;
@@ -18,13 +18,25 @@ public class Schedule : NoteBook{
         string date = Console.ReadLine();
 
         Console.WriteLine("Enter time of event(0:00): ");
-        int time = int.Parse(Console.ReadLine());
+        string time = Console.ReadLine();
 
         Console.WriteLine("Details of Event:");
         string detail = Console.ReadLine();
 
         Schedule schedule = new Schedule("schedule", title, date, time, detail);
         _notesList.Add(schedule);
+    }
+
+    public string GetDate(){
+        return _date;
+    }
+
+    public string GetTime(){
+        return _time;
+    }
+
+    public string GetDetail(){
+        return _detail;
     }
 
     public override string ToString(){

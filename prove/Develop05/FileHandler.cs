@@ -22,11 +22,9 @@ public class FileHandler{
 
                 if (goal is CheckListGoals checkGoal){
                     goalLine += $" | {checkGoal.GetPoints()} | {checkGoal.GetBonus()} | {checkGoal.GetTimesChecked()} | {checkGoal.GetTimes()}";
-                }
-                else if (goal is SimpleGoals simpleGoal){
+                }else if (goal is SimpleGoals simpleGoal){
                     goalLine += $" | {simpleGoal.GetPoints()}";
-                }
-                else if (goal is EternalGoals eternalGoal){
+                }else if (goal is EternalGoals eternalGoal){
                     goalLine += $" | {eternalGoal.GetPoints()}";
                 }
 
