@@ -77,7 +77,6 @@ Behaviours:
 7. Class: Passwords : NoteBook
 
 Attributes:
-    site will come from _header
     _username: string
     _password: string
 Constructors:
@@ -100,3 +99,6 @@ Behaviours:
     Load(): void
 ---------------
 
+The UserInterface will handle the menus and the function to dispaly the NoteBook. The NoteBook class will hold the abstract method of NewEntry
+and get the entryType and header. the Note, Schedule, Contact, and Passwords class inherit from the base class NoteBook and override the NewEntry
+method to get the variables they require. The FileHandler saves the list of notes to a file and loads notes from a file.
