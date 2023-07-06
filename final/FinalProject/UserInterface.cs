@@ -27,7 +27,7 @@ public class UserInterface{
             }else if(user == "2"){
                 Console.WriteLine("NoteBook");
                 DispalayNoteBook(number);
-                Console.WriteLine("Press enter to return to menu");
+                Console.WriteLine("\nPress enter to return to menu");
                 Console.ReadLine();
             }else if(user == "3"){
                 Console.Clear();
@@ -61,8 +61,8 @@ public class UserInterface{
     public void NewEntryMenu(){
         Console.WriteLine("Note types");
         Console.WriteLine("1. Note");
-        Console.WriteLine("2. Contact");
-        Console.WriteLine("3. Schedule");
+        Console.WriteLine("2. Schedule");
+        Console.WriteLine("3. Contact");
         Console.WriteLine("4. Password");
         Console.WriteLine("What type of note would you like to add?");
         string user = Console.ReadLine();

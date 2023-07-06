@@ -30,7 +30,7 @@ public class FileHandler{
 
         string[] lines = File.ReadAllLines(file);
 
-        for (int i = 1; i < lines.Length; i++){
+        for (int i = 0; i < lines.Length; i++){
             string[] parts = lines[i].Split("|");
 
             string entryType = parts[0].Trim();

@@ -40,6 +40,6 @@ public class Schedule : NoteBook{
     }
 
     public override string ToString(){
-        return $"{GetHeader()}\n{_date} at {_time}\n{_detail} ";
+        return $"{GetHeader()}: {_date} at {_time}: {_detail} ";
     }
 }

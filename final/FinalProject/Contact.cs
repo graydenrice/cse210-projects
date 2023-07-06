@@ -9,7 +9,7 @@ public class Contact : NoteBook{
     }
 
     public override void NewEntry(List<NoteBook> _notesList){
-        Console.WriteLine("What is the naem of your contact?");
+        Console.WriteLine("What is the name of your contact?");
         string name = Console.ReadLine();
 
         Console.WriteLine("Enter phone number: ");

@@ -1,1 +1,2 @@
-schedule | church | 06/21/2023 | 10:00 | going to church
+contact | jimmy | 801-223-4323 | work friend
+password | google | thegenerator | G@34nL6
