@@ -6,8 +6,8 @@ public class UserInterface{
 
     public void DisplayMenu(){
         int number = 1;
-        Console.WriteLine("Welcome to the NoteBook program!");
-        Thread.Sleep(1500);
+        Console.WriteLine("\n\nWelcome to the NoteBook program!");
+        Thread.Sleep(2000);
         Console.Clear();
         while(loop == true){
             Console.Clear();
